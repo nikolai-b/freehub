@@ -16,12 +16,15 @@ GEM
       rake
     builder (3.1.4)
     calendar_date_select (1.16.1)
+    columnize (0.3.6)
     googlecharts (1.6.0)
     haml (3.0.25)
     hoptoad_notifier (2.4.11)
       activesupport
       builder
     json (1.7.7)
+    linecache (0.46)
+      rbx-require-relative (> 0.0.4)
     mysql (2.9.0)
     newrelic_rpm (3.5.5.38)
     rack (1.1.6)
@@ -33,8 +36,14 @@ GEM
       activesupport (= 2.3.17)
       rake (>= 0.8.3)
     rake (10.0.3)
+    rbx-require-relative (0.0.9)
     rdoc (3.12)
       json (~> 1.4)
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
     thoughtbot-shoulda (2.11.1)
 
 PLATFORMS
@@ -52,4 +61,5 @@ DEPENDENCIES
   newrelic_rpm
   rails (= 2.3.17)
   rdoc
+  ruby-debug
   thoughtbot-shoulda

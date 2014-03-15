@@ -12,6 +12,7 @@ gem "newrelic_rpm"
 gem 'hoptoad_notifier'
 
 group :development, :test do
+  gem 'ruby-debug'
   gem 'rdoc'
   gem 'annotate'
   gem 'thoughtbot-shoulda'
