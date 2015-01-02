@@ -64,4 +64,15 @@ EOL
     ).render(self, :label_value => label_value, :value => value)
   end
 
+  def user_is_manager?
+    wrapped_current_user.try(:is_manager_of?, @organization)
+  end
+
+  def user_is_admin?
+    wrapped_current_user.try(:is_admin?)
+  end
+
+  def wrapped_current_user
+    User.current_user if User.current_user != :false
+  end
 end

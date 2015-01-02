@@ -1,10 +1,11 @@
 class TaggingsController < ApplicationController
-  permit "admin or (manager of :organization)"
+  before_filter :authorize_admin_or_manager
 
   def create
     @person.tag_list << params[:id]
     @person.save!
     if request.xhr?
+      @person.taggings.reload
       index
     else
       redirect_to_person_path
